@@ -3,9 +3,289 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   
+  <!-- Firebase SDK  -->
+  <!-- Firebase 挿入 -->
+  <title>Post a Job - UpAsia</title>
+</head>
+
+<body>
+  <!-- Header (same as main site) -->
+  <header id="header" class="bg-white shadow-sm sticky top-0 z-50 p-4">
+    <div
+      class="container grid grid-cols-12 h-[80px] px-4 mx-auto items-center md:text-xl text-base"
+    >
+      <div class="col-span-3">
+        <a href="./index.html" class="flex items-center">
+          <img
+            src="./img/icons/icons8-startup-50.png"
+            alt="company Logo"
+            width="50"
+            height="50"
+          />
+          <span class="text-2xl">UpAsia</span>
+        </a>
+      </div>
+
+      <!-- desktop menu -->
+      <ul
+        class="hidden col-span-9 lg:flex items-center justify-end space-x-8 font-normal"
+      >
+        <li><a href="#">Info</a></li>
+        <li><a href="./startupNews.html">Startup News</a></li>
+        <li>
+          <a
+            href="./jobs.html"
+            class="focus:outline-none items-center flex justify-center md:px-6 md:py-2 border-2 border-solid rounded-md font-normal text-gray-100 border-gray-100 bg-gray-400 hover:text-white hover:bg-gray-300 text-gray-800"
+            >Browse Jobs</a
+          >
+        </li>
+        <li>
+          <a
+            href="./post-job.html"
+            class="focus:outline-none items-center flex justify-center md:px-6 md:py-2 border-2 border-solid rounded-md font-normal text-white bg-red-400 hover:bg-red-300"
+            >Post a job</a
+          >
+        </li>
+      </ul>
+
+      <!--hum menu icon -->
+      <div class="block lg:hidden col-span-1 col-start-12">
+        <button id="button-open" type="button" class="focus:outline-none">
+          <img
+            src="./img/icons/icons8-menu-50.png"
+            alt=""
+            class="justify-end"
+          />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- hum menu opened (same as main site) -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden fixed inset-0 z-50 bg-white hidden"
+    style="transform: translate3d(0px, 0px, 0px)"
+  >
+    <div class="flex flex-col flex-grow w-full h-full">
+      <div class="flex items-center justify-between p-4 shadow-sm">
+        <a href="./index.html" class="text-gray-700 flex relative">
+          <img src="./img/icons/icons8-startup-50.png" alt="company logo" />
+          <span class="relative top-3">UpAsia</span>
+        </a>
+        <button
+          id="button-close"
+          type="button"
+          class="focus:outline-none items-center flex justify-center"
+        >
+          <img
+            src="./img/icons/icons8-cross-50.png"
+            alt="close menu"
+            width="50"
+            height="50"
+          />
+        </button>
+      </div>
+
+      <div class="flex-grow overflow-y-auto text-xl">
+        <ul class="px-4 text-base">
+          <li>
+            <a
+              href="./jobs.html"
+              class="hum-links py-4 block border-b border-gray-300 border-solid"
+            >
+              Startup Jobs
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hum-links py-4 block border-b border-gray-300 border-solid"
+            >
+              Startup Hiring
+            </a>
+          </li>
+          <li>
+            <a
+              href="./startupNews.html"
+              class="hum-links py-4 block border-b border-gray-300 border-solid"
+            >
+              Startup News
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hum-links py-4 block border-b border-gray-300 border-solid"
+            >
+              Company
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="hum-links py-4 block border-b border-gray-300 border-solid"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="p-4 space-y-4">
+        <a
+          href="./post-job.html"
+          class="hum-links focus:outline-none items-center flex justify-center bg-red-500 hover:bg-red-400 text-white md:px-6 md:py-2 md:text-md px-8 py-2 border-2 border-transparent border-solid rounded-md font-400 text-sm"
+        >
+          Post a job
+        </a>
+        <a
+          href="#"
+          class="hum-links focus:outline-none items-center flex justify-center bg-white hover:bg-black text-black hover:text-white md:px-6 md:py-2 md:text-md px-8 py-2 border-2 border-black border-solid rounded-md font-400 text-sm"
+        >
+          Employers
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- kokokara saikai -->
+    <!-- kokokara saikai -->
+    <!-- kokokara saikai -->
+    <!-- kokokara saikai -->
+    <!-- kokokara saikai -->
+    <!-- kokokara saikai -->
+    <!-- kokokara saikai -->
+
+  </main>
+  
+  
+  <!-- footer (same as main site) -->
+  <footer class="py-10 text-white bg-gray-700">
+    <div
+      class="container grid grid-cols-12 px-4 mx-auto md:gap-x-8 justify-between space-y-8"
+    >
+      <!-- LOGO -->
+      <div class="col-span-12">
+        <a href="#" class="flex items-center">
+          <img
+            src="./img/icons/icons8-startup-50.png"
+            alt="companyLogo"
+            class="mr-1"
+          />
+          <p class="text-2xl font-bold">UpAsia</p>
+        </a>
+      </div>
+
+      <div class="md:col-span-4 col-span-12">
+        <div class="md:block hidden mb-8">
+          <p class="font-bold text-lg mb-5">About UpAsia</p>
+          <p class="lead mb-5 text-opacity-75">
+            UpAsia is a job board for innovative workers and people wish to
+            work in fast growing startups in Asia. Browse thousands of startup
+            job listings.
+          </p>
+        </div>
+
+        <div class="">
+          <p class="mb-5 font-bold text-lg">Explore</p>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./jobs.html">Startup Jobs</a></li>
+            <li><a href="">Startup Hiring</a></li>
+            <li><a href="./post-job.html">Post a job</a></li>
+            <li><a href="./startupNews.html">Startup News</a></li>
+            <li><a href="">Company and Team</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="md:col-start-6 md:col-span-4 col-span-12">
+        <p class="font-bold text-lg">Job categories</p>
+        <ul>
+          <li><a href="">Admin and Assistants</a></li>
+          <li><a href="">Business development and Sales</a></li>
+          <li><a href="">Blockchain and Crypto</a></li>
+          <li><a href="">Customer Service</a></li>
+          <li><a href="">Data</a></li>
+          <li><a href="">Design</a></li>
+          <li><a href="">Finance</a></li>
+          <li><a href="">Human Resources</a></li>
+          <li><a href="">Legal</a></li>
+          <li><a href="">Marketing</a></li>
+          <li><a href="">operations</a></li>
+          <li><a href="">Product</a></li>
+          <li><a href="">Software and Development</a></li>
+          <li><a href="">other jobs</a></li>
+          <li><a href="">All jobs</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3 col-span-12">
+        <div class="mb-8">
+          <p class="font-bold text-lg">Sponsored</p>
+          <a>
+            <img src="" alt="" />
+          </a>
+          <a>
+            <img src="" alt="" />
+            <p>xxx</p>
+          </a>
+        </div>
+
+        <div>
+          <ul class="flex space-between">
+            <li>
+              <a href="#"
+                ><img
+                  src="./img/icons/icons8-linkedin-circled-48.png"
+                  alt="linkedin logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./img/icons/icons8-instagram-48.png"
+                  alt="instagram logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./img/icons/icons8-facebook-48.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./img/icons/icons8-x-48.png" alt="x logo"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-span-12">
+        <p>
+          © 2025 UpAsia | XXX limited company | all rights reserved |
+          <a target="_blank" href="https://icons8.com/icon/132/search"
+            >Search</a
+          >
+          icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script src="./js/firebase-config.js"></script>
+  <script src="./js/job-posting.js"></script>
+
 </body>
 </html>
