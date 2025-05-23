@@ -1,3 +1,6 @@
+// 検索機能
+
+
 // キーワード候補検索データ（実際はAPIから）
 const jobKeywords = [
   "JavaScript Developer",

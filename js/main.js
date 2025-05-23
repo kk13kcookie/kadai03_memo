@@ -1,3 +1,6 @@
+//共通機能
+
+
 // DOMコンテンツが読み込まれた後に実行
 document.addEventListener('DOMContentLoaded', function(){
   // 要素取得
