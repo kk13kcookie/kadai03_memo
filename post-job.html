@@ -152,17 +152,187 @@
     </div>
   </div>
 
-  <main>
-    <!-- kokokara saikai -->
-    <!-- kokokara saikai -->
-    <!-- kokokara saikai -->
-    <!-- kokokara saikai -->
-    <!-- kokokara saikai -->
-    <!-- kokokara saikai -->
-    <!-- kokokara saikai -->
+  <main class="min-h-screen py-8">
 
+    <div class="container mx-auto px-4">
+      <!-- page header -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Post a job</h1>
+        <p>Find the best candidate for your startup</p>
+      </div>
+
+      <!-- Success Message -->
+       <div id="success-message" class="hidden mb-6 max-w-2xl mx-auto">
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 rounded-lg">
+          <div class="flex items-center">
+            <span class="text-green-500 mr-2">✔️</span>
+            <div>
+              <strong>Success!</strong>Your job has been posted successfully.
+              <p class="mt-1 text-sm">
+                <a href="./jobs.html" class="underline hover:text-green-800">View all Jobs</a>or
+                <a href="#" onclick="location.reload()" class="underline hover:text-green-800">post another job</a>
+              </p>
+            </div>
+          </div>
+        </div>
+       </div>
+
+      <!-- Job posting form -->
+      <form id="job-post-form" data-component="job-post-form" class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8" action="">
+      
+        <!-- basic info -->
+        <div class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Basic Information</h2>
+
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Job Title *</label>
+            <input type="text" data-field="title" required
+              class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="e.g., Senior Frontend Developer">
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2" for="">Company Name *</label>
+            <input type="text" data-field="company" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., UpAsia Japan"/>
+          </div>
+
+          <div class="mb-6">
+            <label for="" class="block text-sm font-medium text-gray-700 mb-2">Job Category *</label>
+            <select data-field="category" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Select a category</option>
+                <option value="adminAssistants">Admin and Assistants</option>
+                <option value="blockchainCrypto">Blockchain and Crypto</option>
+                <option value="CustomerService">Customer Service</option>
+                <option value="data">Data</option>
+                <option value="design">Design</option>
+                <option value="finance">Finance</option>
+                <option value="hr">Human Resources</option>
+                <option value="Legal">Legal</option>
+                <option value="marketing">Marketing</option>
+                <option value="Operations">Operations</option>
+                <option value="product">Product</option>
+                <option value="product">Product</option>
+                <option value="sales">Sales</option>
+                <option value="SoftwareDevelopment">Software and Development</option>
+                <option value="OtherJobs">Other jobs</option>
+              </select>
+          </div>
+        </div>
+
+        <!-- location and work type -->
+        <div class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Location & Work Type</h2>
+
+          <div class="mb-6">
+            <label for=""  class="block text-sm font-medium text-gray-700 mb-2">Primary Location</label>
+            <select data-field="location" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option value="">Select location</option>
+              <option value="">Tokyo</option>
+              <option value="">Singapore</option>
+              <option value="">Hong Kong</option>
+              <option value="">Jakarta</option>
+              <option value="">Ho Chi Minh</option>
+              <option value="">Hanoi</option>
+              <option value="">Remote Only</option>
+              <option value="">Other</option>
+            </select>
+          </div>
+
+          <div class="mb-6">
+            <label for=""  class="block text-sm font-medium text-gray-700 mb-2">Work Type</label>
+            <select data-field="workType" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option value="">Select Work Type</option>
+              <option value="">Full time</option>
+              <option value="">Part time</option>
+              <option value="">Intern</option>
+              <option value="">Senior Advisor</option>
+              <option value="">Others</option>
+            </select>
+          </div>
+
+
+        </div>
+
+        <!-- skills and requirement -->
+         <div class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Skills & requirement</h2>
+          
+          <div class="mb-6">
+            <label for="" class="block text-sm font-medium text-gray-700 mb-2">Required Skills *</label>
+            <input type="text" data-field="skills-input" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., React, Node.js, JavaScript (press Enter or comma to add)"/>
+            <p>Enter skills separated by commas or press Enter to add</p>
+              <!-- Skills will be displayed here -->
+          </div>
+        </div>
+
+        <!-- compensation -->
+        <div class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Compensation</h2>
+          
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div>
+              <label for="" class="block text-sm font-medium text-gray-700 mb-2">Minimum Salary $</label>
+              <input type="number" data-field="salary-min" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., 50000" min="0" step="10000"/>
+            </div>
+            <div>
+              <label for="" class="block text-sm font-medium text-gray-700 mb-2">Maximum Salary $</label>
+              <input type="number" data-field="salary-max" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., 50000" min="0" step="10000"/>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- job description -->
+        <div class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Job Details</h2>
+          <div class="mb-6">
+            <label for="" class="block text-sm font-medium text-gray-700 mb-2">Job Description</label>
+            <textarea data-field="description" rows="8" required class="w-full p-3 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Write a detailed job description here..."></textarea>
+
+            </textarea>
+          </div>
+        </div>
+
+        <!-- contact info -->
+        <div class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+            Contact Information
+          </h2>
+
+          <div class="mb-6">
+            <label for="" class="block text-sm font-medium text-gray-700 mb-2">Contact Email *</label>
+            <input type="email" data-field="contact-email" required class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., UpAsia@company.com">
+            <p class="text-sm text-gray-500 mt-1">This email will be used for job applications</p>
+          </div>
+        </div>
+        
+        
+        <!-- Additional options badges-->
+        <div class="mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-6">Additional Options</h2>
+
+          <div class="space-y-4">
+            <label for="" class="flex items-center">
+              <input type="checkbox" data-field="featured" class="mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"/>
+              <span class="text-sm font-medium text-gray-700">Feature this job (+$100)</span>
+              <span class="ml-2 text-xs text-gray-500">Shows "urgent badge"</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- submit button -->
+        <div class="border-t pt-6">
+          <button type="submit" class="w-full bg-blue-600 text-white py-4 px-6 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors font-semibold text-lg">
+            Post Job  
+          </button>
+          <p class="text-center text-sm text-gray-500 mt-3">
+            By Posting this job, you agree to our <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>.
+          </p>
+        </div>
+
+      </form>
+    </div>
   </main>
-  
   
   <!-- footer (same as main site) -->
   <footer class="py-10 text-white bg-gray-700">
